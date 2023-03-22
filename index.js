@@ -15,7 +15,7 @@ const client = new Discord.Client({
 })
 client.on('ready', async (client) => {
 	mongoose.set('strictQuery', false);
-	mongoose.connect("mongodb+srv://lool:lol@cluster0.ofbs0.mongodb.net/food_data?retryWrites=true&");
+	mongoose.connect(config.MongoUrl);
 	mongoose.connection.on("connected", () => console.log(chalk.green(`> Database connection has been connected`)));
 	mongoose.connection.on("disconnected", () => console.log(chalk.red(`> Database connection has been disconnected`)));
 	mongoose.connection.on("error", (error) => console.log(chalk.red(` > Database has encountered an error: ${error.message}`)));
