@@ -1,4 +1,5 @@
-const { SlashCommandBuilder,EmbedBuilder,Discord } = require('discord.js');
+const { SlashCommandBuilder,EmbedBuilder } = require('discord.js');
+const Discord = require('discord.js');
 const randomCountry = require('random-country');
 const Countries = require('countries-api');
 const tempData = [];
